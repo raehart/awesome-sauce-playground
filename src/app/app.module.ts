@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory;
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { KaiaHomeComponent } from './kaia-home/kaia-home.component';
+import { RheaHomeComponent } from './rhea-home/rhea-home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingPageComponent,
+    KaiaHomeComponent,
+    RheaHomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,7 @@ export class AppModule {
     httpLink: HttpLink
   ) {
     apollo.create({
-    link: httpLink.create({ uri: '[URL]' }),
+    link: httpLink.create({ uri: '' }),
     cache: new InMemoryCache()
     });
   }
