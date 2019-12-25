@@ -36,7 +36,7 @@ export class GamesService {
       if (index === -1 ) {
         throw new HttpException('Game does not exist', 404);
       }
-      this.games.splice(1, index);
+      this.games.splice(index, 1);
       resolve(this.games);
     });
   }
