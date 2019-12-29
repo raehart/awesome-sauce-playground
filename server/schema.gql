@@ -23,3 +23,7 @@ type Query {
   game(id: String!): Game!
   games: [Game!]!
 }
+
+type Subscription {
+  gameAdded: Game!
+}

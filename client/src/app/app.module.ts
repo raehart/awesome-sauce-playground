@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { KaiaHomeComponent } from './kaia-home/kaia-home.component';
 import { RheaHomeComponent } from './rhea-home/rhea-home.component';
+import { GamesComponent } from './games/games.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RheaHomeComponent } from './rhea-home/rhea-home.component';
     LandingPageComponent,
     KaiaHomeComponent,
     RheaHomeComponent,
+    GamesComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,8 +36,10 @@ export class AppModule {
     httpLink: HttpLink
   ) {
     apollo.create({
-    link: httpLink.create({ uri: '' }),
-    cache: new InMemoryCache()
+      link: httpLink.create({
+        uri: 'http://localhost:3000/graphql'
+      }),
+      cache: new InMemoryCache()
     });
   }
 }
