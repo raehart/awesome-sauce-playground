@@ -1,6 +1,8 @@
 import { HttpException, Injectable } from '@nestjs/common';
 import { GAMES } from '../../mocks/games.mock';
 
+const fakeId = () => Math.random().toString(36).substr(2, 5);
+
 @Injectable()
 export class GamesService {
   games = GAMES;
@@ -24,8 +26,12 @@ export class GamesService {
 
   addGame(game): Promise<any> {
     return new Promise(resolve => {
-      this.games.push(game);
-      resolve(this.games);
+      const newGame = {
+        id: fakeId(),
+        ...game
+      };
+      this.games.push(newGame);
+      resolve(newGame);
     });
   }
 
@@ -34,10 +40,11 @@ export class GamesService {
     return new Promise(resolve => {
       let index = this.games.findIndex(game => game.id === id);
       if (index === -1 ) {
+        resolve(false);
         throw new HttpException('Game does not exist', 404);
       }
       this.games.splice(index, 1);
-      resolve(this.games);
+      resolve(true);
     });
   }
 }
