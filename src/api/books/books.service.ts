@@ -1,5 +1,5 @@
 import { Injectable, HttpException } from '@nestjs/common';
-import { BOOKS } from '../../mocks/books.mock';
+import { BOOKS } from './books.mock';
 
 @Injectable()
 export class BooksService {

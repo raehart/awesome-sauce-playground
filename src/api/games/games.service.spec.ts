@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { GamesService } from './games.service';
 
-import { GAMES } from '../../mocks/games.mock';
+import { GAMES } from './games.mock';
 
 describe('GamesService', () => {
   let service: GamesService;

@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { BooksService } from './books.service';
 
-import { BOOKS } from '../../mocks/books.mock';
+import { BOOKS } from './books.mock';
 
 describe('BooksService', () => {
   let service: BooksService;

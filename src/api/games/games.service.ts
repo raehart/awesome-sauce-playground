@@ -1,5 +1,5 @@
 import { HttpException, Injectable } from '@nestjs/common';
-import { GAMES } from '../../mocks/games.mock';
+import { GAMES } from './games.mock';
 
 const fakeId = () => Math.random().toString(36).substr(2, 5);
 

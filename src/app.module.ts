@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BooksModule } from './books/books.module';
-import { GamesModule } from './games/games.module';
+import { BooksModule } from './api/books/books.module';
+import { GamesModule } from './api/games/games.module';
 
 @Module({
   imports: [

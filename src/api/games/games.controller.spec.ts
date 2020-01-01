@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { GamesController } from './games.controller';
 import { GamesService } from "./games.service";
 
-import { GAMES } from '../../mocks/games.mock';
+import { GAMES } from './games.mock';
 
 describe('Games Controller', () => {
   let controller: GamesController;

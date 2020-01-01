@@ -2,7 +2,7 @@ import { Controller, Get, Param, Post, Body, Query, Delete } from '@nestjs/commo
 import { BooksService } from './books.service';
 import { CreateBookDTO } from './dto/create-book.dto';
 
-@Controller('books')
+@Controller('api/books')
 export class BooksController {
     constructor(private booksService: BooksService) { }
 

@@ -2,7 +2,7 @@ import { Controller, Param, Body, Query, Get, Post, Delete } from '@nestjs/commo
 import { GamesService } from "./games.service";
 import { CreateGameDTO } from './dto/create-game.dto';
 
-@Controller('games')
+@Controller('api/games')
 export class GamesController {
   constructor(private gamesService: GamesService) { }
 
