@@ -34,8 +34,9 @@ describe('GamesService', () => {
       title: 'Seventh game',
       description: "This is the description for the seventh game"
     };
-    const result = await service.addGame(newGame);
-    expect(result[result.length - 1]).toBe(newGame);
+    await service.addGame(newGame);
+    const foundGame = await service.getGame(newGame.id);
+    expect(foundGame.id).toBe(7);
   });
 
   it('should remove games properly', async () => {

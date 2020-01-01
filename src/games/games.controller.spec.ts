@@ -45,7 +45,8 @@ describe('Games Controller', () => {
         description: 'Added game for testing'
       };
       await controller.addGame(newGame);
-      expect(await controller.getGame(99)).toBe(newGame);
+      const game = await controller.getGame(99);
+      expect(game.id).toBe(99);
     });
   });
 
