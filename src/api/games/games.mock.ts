@@ -5,4 +5,5 @@ export const GAMES = [
   { id: 4, title: 'Fourth game', description: "This is the description for the fourth game" },
   { id: 5, title: 'Fifth game', description: "This is the description for the fifth game" },
   { id: 6, title: 'Sixth game', description: "This is the description for the sixth game" },
+  { id: 7, title: 'Seven yo, From the Windows', description: "Watching GTLive"}
 ];
