@@ -36,10 +36,12 @@ export class AppModule {
     httpLink: HttpLink
   ) {
     apollo.create({
-      link: httpLink.create({
-        uri: '/graphql'
-      }),
+      link: httpLink.create({ uri: 'http://localhost:3000/graphql' }),
       cache: new InMemoryCache()
     });
+    apollo.create({
+      link: httpLink.create({ uri: 'https://rickandmortyapi.com/graphql' }),
+      cache: new InMemoryCache()
+    }, 'rickandmorty')
   }
 }

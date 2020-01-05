@@ -7,6 +7,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BooksModule } from './api/books/books.module';
 import { GamesModule } from './api/games/games.module';
+import { ProjectsModule } from './api/projects/projects.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { GamesModule } from './api/games/games.module';
     }),
     BooksModule,
     GamesModule,
+    ProjectsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

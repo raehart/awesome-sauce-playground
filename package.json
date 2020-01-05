@@ -26,6 +26,7 @@
     "@nestjs/graphql": "^6.5.3",
     "@nestjs/platform-express": "^6.7.2",
     "@nestjs/serve-static": "^1.0.2",
+    "apollo-link": "^1.2.13",
     "apollo-server-express": "^2.9.14",
     "graphql": "^14.5.8",
     "graphql-tools": "^4.0.6",
