@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SquanchComponent } from './squanch.component';
+import { SharedModule } from '../shared.module';
 
 describe('SquanchComponent', () => {
   let component: SquanchComponent;
@@ -8,6 +9,7 @@ describe('SquanchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ SharedModule ],
       declarations: [ SquanchComponent ]
     })
     .compileComponents();

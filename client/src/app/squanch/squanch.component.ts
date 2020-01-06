@@ -5,7 +5,7 @@ import gql from 'graphql-tag';
 @Component({
   selector: 'app-squanch',
   templateUrl: './squanch.component.html',
-  styleUrls: ['./squanch.component.scss']
+  styleUrls: ['./squanch.component.scss'],
 })
 export class SquanchComponent implements OnInit {
   characters = [];

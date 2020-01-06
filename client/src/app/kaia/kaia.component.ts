@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Apollo } from 'apollo-angular';
 
 @Component({
   selector: 'app-kaia',
@@ -8,7 +7,7 @@ import { Apollo } from 'apollo-angular';
 })
 export class KaiaComponent {
 
-  constructor(private apollo: Apollo) { }
+  constructor() { }
 
 
 }

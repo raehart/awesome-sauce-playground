@@ -14,9 +14,12 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  // describe('root', () => {
-  //   it('should return "Hello World!"', () => {
-  //     expect(appController.getHello()).toBe('Hello World!');
-  //   });
-  // });
+  describe('root', () => {
+    it('should return work without throwing an error', () => {
+      const mockRes = {
+        sendFile: () => {}
+      };
+      expect(appController.getHello.bind(this, mockRes)).not.toThrow();
+    });
+  });
 });

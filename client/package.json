@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "test": "ng test",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cc": "jest --coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "storybook": "start-storybook"
@@ -21,12 +23,15 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "@types/jest": "^24.0.25",
+    "@types/mocha": "^5.2.7",
     "apollo-angular": "^1.8.0",
     "apollo-angular-link-http": "^1.9.0",
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.6.8",
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
+    "jest": "^24.9.0",
+    "jest-preset-angular": "^8.0.0",
     "rxjs": "~6.4.0",
     "tailwindcss": "^1.1.4",
     "tslib": "^1.10.0",
@@ -57,5 +62,11 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "./setupJest.ts"
+    ]
   }
 }
