@@ -3,11 +3,11 @@ import { Apollo, Query } from 'apollo-angular';
 import gql from 'graphql-tag';
 
 @Component({
-  selector: 'app-kaia-home',
-  templateUrl: './kaia-home.component.html',
-  styleUrls: ['./kaia-home.component.scss']
+  selector: 'app-squanch',
+  templateUrl: './squanch.component.html',
+  styleUrls: ['./squanch.component.scss']
 })
-export class KaiaHomeComponent implements OnInit {
+export class SquanchComponent implements OnInit {
   characters = [];
 
   constructor(private apollo: Apollo) { }
@@ -20,16 +20,23 @@ export class KaiaHomeComponent implements OnInit {
     return this.apollo.use('rickandmorty').watchQuery<Query>({
       query: gql`
         query {
-            characters {
-              results {
-                id
+          characters {
+            results {
+              id
+              name
+              image
+              location {
                 name
-                image
-                location {
-                  name
-                }
+                dimension
+              }
+              status
+              species
+              origin {
+                name
+                dimension
               }
             }
+          }
         }
       `
     }).valueChanges.subscribe((result: any) => {
@@ -38,5 +45,4 @@ export class KaiaHomeComponent implements OnInit {
       }
     });
   }
-
 }

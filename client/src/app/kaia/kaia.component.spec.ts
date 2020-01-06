@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RheaHomeComponent } from './rhea-home.component';
+import { KaiaComponent } from './kaia.component';
 
-describe('RheaHomeComponent', () => {
-  let component: RheaHomeComponent;
-  let fixture: ComponentFixture<RheaHomeComponent>;
+describe('KaiaComponent', () => {
+  let component: KaiaComponent;
+  let fixture: ComponentFixture<KaiaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RheaHomeComponent ]
+      declarations: [ KaiaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RheaHomeComponent);
+    fixture = TestBed.createComponent(KaiaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

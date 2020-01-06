@@ -7,18 +7,20 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { KaiaHomeComponent } from './kaia-home/kaia-home.component';
-import { RheaHomeComponent } from './rhea-home/rhea-home.component';
+import { LandingComponent } from './landing/landing.component';
+import { KaiaComponent } from './kaia/kaia.component';
+import { RheaComponent } from './rhea/rhea.component';
 import { GamesComponent } from './games/games.component';
+import { SquanchComponent } from './squanch/squanch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent,
-    KaiaHomeComponent,
-    RheaHomeComponent,
+    LandingComponent,
+    KaiaComponent,
+    RheaComponent,
     GamesComponent,
+    SquanchComponent,
   ],
   imports: [
     BrowserModule,

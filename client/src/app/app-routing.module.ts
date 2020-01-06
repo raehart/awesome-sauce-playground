@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { KaiaHomeComponent } from './kaia-home/kaia-home.component';
-import { RheaHomeComponent } from './rhea-home/rhea-home.component';
+import { LandingComponent } from './landing/landing.component';
+import { KaiaComponent } from './kaia/kaia.component';
+import { RheaComponent } from './rhea/rhea.component';
 import { GamesComponent } from './games/games.component';
+import { SquanchComponent } from './squanch/squanch.component';
 
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
-  { path: 'kaia', component: KaiaHomeComponent },
-  { path: 'rhea', component: RheaHomeComponent },
+  { path: '', component: LandingComponent },
+  { path: 'kaia', component: KaiaComponent },
+  { path: 'rhea', component: RheaComponent },
   { path: 'games', component: GamesComponent },
+  { path: 'squanch', component: SquanchComponent },
 ];
 
 @NgModule({
