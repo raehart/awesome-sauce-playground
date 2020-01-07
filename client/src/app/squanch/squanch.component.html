@@ -1,4 +1,4 @@
-<a routerLink="/"> Go Back</a>
+<a class="text-green-400" routerLink="/"> Go Back</a>
 
 <h1 class="text-center mb-4 font-cute text-teal-400 text-6xl">WANTED</h1>
 
@@ -11,6 +11,14 @@
         <span class="font-cute block leading-none text-lg">Status</span>
         {{ character.status }}
       </p>
+
+      <p class="m-1">
+        <span class="font-cute block leading-none text-lg">Species</span>
+        {{ character.species }}
+        <span class="font-cute block leading-none text-lg">Gender</span>
+        {{ character.gender }}
+      </p>
+
       <p class="m-1">
         <span class="font-cute block leading-none text-lg">Origin</span>
         {{ character.origin.name }}
@@ -19,6 +27,7 @@
         <span class="font-cute block leading-none text-lg">Last Known Location</span>
         {{ character.location.name }}
       </p>
+
     </section>
     <section>
       <p></p>
