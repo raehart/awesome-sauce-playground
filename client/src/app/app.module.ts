@@ -9,6 +9,7 @@ import { KaiaComponent } from './kaia/kaia.component';
 import { RheaComponent } from './rhea/rhea.component';
 import { GamesComponent } from './games/games.component';
 import { SquanchComponent } from './squanch/squanch.component';
+import { PokemonComponent } from './pokemon/pokemon.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SquanchComponent } from './squanch/squanch.component';
     RheaComponent,
     GamesComponent,
     SquanchComponent,
+    PokemonComponent
   ],
   imports: [
     SharedModule.forRoot(),

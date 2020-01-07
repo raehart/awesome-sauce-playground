@@ -2,18 +2,22 @@
 
 <h1 class="text-center mb-4 font-cute text-teal-400 text-6xl">WANTED</h1>
 
-<div class="flex flex-row justify-around" *ngIf="characters && characters.length > 0">
-  <div class="bg-teal-200 text-teal-800 p-4 m-2" *ngFor="let character of characters.slice(0, 5)">
+<div class="flex flex-row flex-wrap justify-around" *ngIf="characters && characters.length > 0">
+  <div class="bg-teal-300 text-teal-800 p-4 m-2 max-w-xs rounded" *ngFor="let character of characters">
     <h4 class="text-center font-display text-2xl">{{ character.name }}</h4>
-    <img [src]="character.image" alt="">
+    <img class="rounded" [src]="character.image" alt="Image of {{ character.name }}">
     <section class="bio">
-      <p class="m-1">
-        <span class="font-cute block leading-none text-lg">Status</span>
-        {{ character.status }}
-      </p>
       <p class="m-1">
         <span class="font-cute block leading-none text-lg">Origin</span>
         {{ character.origin.name }}
+      </p>
+      <p class="m-1">
+        <span class="font-cute block leading-none text-lg">Species</span>
+        {{ character.species }}
+      </p>
+      <p class="m-1">
+        <span class="font-cute block leading-none text-lg">Status</span>
+        {{ character.status }}
       </p>
       <p class="m-1">
         <span class="font-cute block leading-none text-lg">Last Known Location</span>
@@ -21,7 +25,6 @@
       </p>
     </section>
     <section>
-      <p></p>
     </section>
 
   </div>

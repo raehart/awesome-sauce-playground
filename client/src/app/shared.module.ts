@@ -37,7 +37,10 @@ export class SharedModule {
     apollo.create({
       link: httpLink.create({ uri: 'https://rickandmortyapi.com/graphql' }),
       cache: new InMemoryCache()
-    }, 'rickandmorty')
-
+    }, 'rickandmorty');
+    apollo.create({
+      link: httpLink.create({ uri: 'https://graphql-pokemon.now.sh/' }),
+      cache: new InMemoryCache()
+    }, 'pokemon');
   }
 }
