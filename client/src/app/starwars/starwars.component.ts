@@ -12,4 +12,7 @@ export class StarwarsComponent implements OnInit {
   ngOnInit() {
   }
 
+  myMethod() {
+    console.log('click');
+  }
 }

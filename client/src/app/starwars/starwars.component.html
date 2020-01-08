@@ -1,2 +1,19 @@
 <a routerLink="/" class="text-green-400"> Go Back</a>
-<p>starwars works!</p>
+
+<h1 class="text-center mb-4 font-cute text-teal-400 text-6xl">A long time ago in a galaxy far far away.. </h1>
+
+
+<div class="">
+  <section class="flex flex-col items-center justify-center">
+    <h3 class="text-teal-400"> Get a Ride </h3>
+     {{ starship.name }}
+     {{ starship.class }}
+     {{ starship.model }}
+    //
+    <button (click)="myMethod()" class="cursor-pointer text-white border-blue-400 border-solid border-4 bg-purple-400 block">
+      Change ride
+    </button>
+
+
+  </section>
+</div>
