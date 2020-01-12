@@ -31,6 +31,7 @@ export class SquanchComponent implements OnInit {
               }
               status
               species
+              gender
               origin {
                 name
                 dimension
