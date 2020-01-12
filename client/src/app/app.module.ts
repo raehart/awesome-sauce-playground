@@ -9,7 +9,11 @@ import { KaiaComponent } from './kaia/kaia.component';
 import { RheaComponent } from './rhea/rhea.component';
 import { GamesComponent } from './games/games.component';
 import { SquanchComponent } from './squanch/squanch.component';
+<<<<<<< HEAD
 import { StarwarsComponent } from './starwars/starwars.component';
+=======
+import { PokemonComponent } from './pokemon/pokemon.component';
+>>>>>>> master
 
 @NgModule({
   declarations: [
@@ -20,6 +24,7 @@ import { StarwarsComponent } from './starwars/starwars.component';
     GamesComponent,
     SquanchComponent,
     StarwarsComponent,
+    PokemonComponent
   ],
   imports: [
     SharedModule.forRoot(),

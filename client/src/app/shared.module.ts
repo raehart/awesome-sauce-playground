@@ -43,5 +43,10 @@ export class SharedModule {
       link: httpLink.create({ uri: 'http://localhost:61202/' }),
       cache: new InMemoryCache()
     }, 'starwars');
+
+    apollo.create({
+      link: httpLink.create({ uri: 'https://graphql-pokemon.now.sh/' }),
+      cache: new InMemoryCache()
+    }, 'pokemon');
   }
 }

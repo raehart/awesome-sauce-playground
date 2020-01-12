@@ -6,7 +6,7 @@ import { RheaComponent } from './rhea/rhea.component';
 import { GamesComponent } from './games/games.component';
 import { SquanchComponent } from './squanch/squanch.component';
 import { StarwarsComponent } from './starwars/starwars.component';
-
+import { PokemonComponent } from './pokemon/pokemon.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'games', component: GamesComponent },
   { path: 'squanch', component: SquanchComponent },
   { path: 'starwars', component: StarwarsComponent },
+  { path: 'pokemon', component: PokemonComponent },
 ];
 
 @NgModule({
