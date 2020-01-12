@@ -40,7 +40,7 @@ export class SharedModule {
     }, 'rickandmorty');
 
     apollo.create({
-      link: httpLink.create({ uri: 'https://graphql.org/swapi-graphql/' }),
+      link: httpLink.create({ uri: 'http://localhost:61202/' }),
       cache: new InMemoryCache()
     }, 'starwars');
   }

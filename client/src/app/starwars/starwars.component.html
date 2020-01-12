@@ -1,16 +1,31 @@
 <a routerLink="/" class="text-green-400"> Go Back</a>
 
-<h1 class="text-center mb-4 font-cute text-teal-400 text-6xl">A long time ago in a galaxy far far away.. </h1>
+<h1 class="text-center mb-4 font-cute text-teal-400 text-6xl">
+  A long time ago in a galaxy far far away..
+</h1>
 
 
-<div class="">
-  <section class="flex flex-col items-center justify-center">
-    <h3 class="text-teal-400"> Get a Ride </h3>
-     {{ starship.name }}
-     {{ starship.class }}
-     {{ starship.model }}
-    //
-    <button (click)="myMethod()" class="cursor-pointer text-white border-blue-400 border-solid border-4 bg-purple-400 block">
+<div class=" flex flex-col items-center justify-center font-cute  text-center">
+  <section>
+    <h3 class="text-3xl text-teal-400"> Get a Ride </h3>
+    <ul class="text-2xl bg-teal-200 text-teal-800 p-8 my-3">
+
+
+<!--      debug ngIf passengers-->
+
+
+      <li> Name: {{ luckyShip?.name }}</li>
+      <li> Class: {{ luckyShip?.starshipClass }}</li>
+      <li> Model: {{ luckyShip?.model }}</li>
+      <li *ngIf="luckyShip.passengers"> Passengers: {{ luckyShip?.passengers }}</li>
+      <li *ngIf="luckyShip.cargoCapacity"> Cargo Capacity: {{ luckyShip?.cargoCapacity }}</li>
+      <li *ngIf="luckyShip.maxAtmospheringSpeed"> Max Speed: {{ luckyShip?.maxAtmospheringSpeed }}</li>
+    </ul>
+
+
+    <button
+      class="cursor-pointer text-white border-blue-400 border-solid border-4 text-2xl bg-purple-400 block m-auto"
+      (click)="getStarship()">
       Change ride
     </button>
 
