@@ -8,8 +8,8 @@ import {
   GamesComponent,
   SquanchComponent,
   PokedexComponent,
+  StarwarsComponent
 } from './pages';
-
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'games', component: GamesComponent },
   { path: 'squanch', component: SquanchComponent },
   { path: 'pokemon', component: PokedexComponent },
+  { path: 'starwars', component: StarwarsComponent },
 ];
 
 @NgModule({

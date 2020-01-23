@@ -1,4 +1,4 @@
-<a routerLink="/"> Go Back</a>
+<a class="text-green-400" routerLink="/"> Go Back</a>
 
 <h1 class="text-center mb-4 font-cute text-teal-400 text-6xl">WANTED</h1>
 
@@ -8,6 +8,21 @@
     <img class="rounded" [src]="character.image" alt="Image of {{ character.name }}">
     <section class="bio">
       <p class="m-1">
+
+<!--        TODO: Kaia take a look at changes/merge conflict and resolve -->
+<!--        <span class="font-cute block leading-none text-lg">Status</span>-->
+<!--        {{ character.status }}-->
+<!--      </p>-->
+
+<!--      <p class="m-1">-->
+<!--        <span class="font-cute block leading-none text-lg">Species</span>-->
+<!--        {{ character.species }}-->
+<!--        <span class="font-cute block leading-none text-lg">Gender</span>-->
+<!--        {{ character.gender }}-->
+<!--      </p>-->
+
+<!--      <p class="m-1">-->
+
         <span class="font-cute block leading-none text-lg">Origin</span>
         {{ character.origin.name }}
       </p>
@@ -23,10 +38,20 @@
         <span class="font-cute block leading-none text-lg">Last Known Location</span>
         {{ character.location.name }}
       </p>
+
     </section>
     <section>
     </section>
-
   </div>
 </div>
+
+<section class="flex justify-end my-10">
+  <h3 class="font-cute text-teal-400 text-4xl" > Sponsored by: </h3>
+  <div class="img-link--wrapper w-40 h-40">
+    <a href="https://codepen.io/Brigette_Eckert/full/WVNaYg" class="href">
+      <img src="../../assets/img/blips-chitz1.png" alt="blips and chitz logo">
+    </a>
+  </div>
+
+</section>
 

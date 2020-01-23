@@ -15,6 +15,7 @@ import {
   GamesComponent,
   SquanchComponent,
   PokedexComponent,
+  StarwarsComponent,
 } from './pages';
 
 @NgModule({
@@ -26,6 +27,7 @@ import {
     GamesComponent,
     SquanchComponent,
     PokedexComponent,
+    StarwarsComponent,
   ],
   imports: [
     SharedModule.forRoot(),
