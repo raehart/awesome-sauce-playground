@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Game, Query } from '../types';
+import { Game, Query } from '../../types';
 import { Apollo } from "apollo-angular";
 import { map } from 'rxjs/operators';
 import gql from 'graphql-tag';

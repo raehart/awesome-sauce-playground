@@ -1,0 +1,10 @@
+<a routerLink="/"> Go Back</a>
+
+<h1 class="text-center mb-4 font-cute text-teal-400 text-6xl"> Mini Pokedex</h1>
+
+<div *ngIf="pokemonList && pokemonList.length > 0"
+     class="flex flex-row flex-wrap justify-around">
+  <ng-container *ngFor="let pokemon of pokemonList">
+    <pokemon-card [pokemon]="pokemon"></pokemon-card>
+  </ng-container>
+</div>

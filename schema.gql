@@ -3,10 +3,21 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type Ability {
+  is_hidden: Boolean!
+  slot: Float!
+  ability: Ref!
+}
+
 type Game {
   id: ID!
   title: String!
   description: String
+}
+
+type GameIndex {
+  game_index: Float!
+  version: Ref!
 }
 
 type Mutation {
@@ -19,6 +30,23 @@ input NewGameInput {
   description: String
 }
 
+type Pokemon {
+  id: ID!
+  name: String!
+  base_experience: Float!
+  height: Float!
+  is_default: Boolean!
+  order: Float!
+  weight: Float!
+  abilities: [Ability!]!
+  forms: [Ref!]!
+  game_indices: [GameIndex!]!
+  species: Ref!
+  sprites: SpriteSet!
+  stats: [Stat!]!
+  types: [Type!]!
+}
+
 type Project {
   id: ID!
   title: String!
@@ -29,8 +57,38 @@ type Query {
   projects: [Project!]!
   game(id: String!): Game!
   games: [Game!]!
+  pokedex(offset: Float!, limit: Float!): [Pokemon!]!
+  pokedexMock(offset: Float!, limit: Float!): [Pokemon!]!
+  pokemon(id: String!): Pokemon!
+}
+
+type Ref {
+  name: String!
+  url: String!
+}
+
+type SpriteSet {
+  front_default: String!
+  front_female: String!
+  front_shiny: String!
+  front_shiny_female: String!
+  back_default: String!
+  back_female: String!
+  back_shiny: String!
+  back_shiny_female: String!
+}
+
+type Stat {
+  base_stat: Float!
+  effort: Float!
+  stat: Ref!
 }
 
 type Subscription {
   gameAdded: Game!
+}
+
+type Type {
+  slot: Float!
+  type: Ref!
 }

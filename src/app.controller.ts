@@ -8,7 +8,8 @@ export class AppController {
 
   @Get()
   getHello(@Res() res): string {
-    return res.sendFile("index.html", { root: join(__dirname, '../..', 'client/dist') });
-    // return this.appService.getHello();
+    return res.sendFile("index.html", {
+      root: join(__dirname, '../..', 'client/dist')
+    });
   }
 }
