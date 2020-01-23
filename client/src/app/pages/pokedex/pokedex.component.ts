@@ -8,8 +8,8 @@ import { PokemonService } from '../../modules/pokemon/service/pokemon.service';
   styleUrls: ['./pokedex.component.scss']
 })
 export class PokedexComponent implements OnInit {
-  pokemonList: Pokemon[];
-  pokedex: any[];
+  pokedex: Pokemon[];
+  selectedPokemon: Pokemon = null;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -18,12 +18,16 @@ export class PokedexComponent implements OnInit {
   }
 
   getPokedex() {
-    this.pokemonService.getPokedex().subscribe((result: any) => {
-      if (result.data && result.data.pokedexMock) {
-        this.pokemonList = result.data.pokedexMock;
-        console.log(result);
-        console.log(this.pokemonList);
-      }
+    this.pokemonService.getPokedex(
+      { limit: 9, offset: 386 }
+    ).subscribe((pokedex: Pokemon[]) => {
+      this.pokedex = pokedex;
+      console.log(this.pokedex);
     });
+  }
+
+  onSelectPokemon(pokemon) {
+    console.log('select pokemon', pokemon);
+    this.selectedPokemon = pokemon;
   }
 }
