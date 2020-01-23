@@ -1,5 +1,5 @@
 import { Resolver } from '@nestjs/graphql';
-import { Project } from './models/project';
+import { Project } from './project.model';
 import { ProjectsService } from './projects.service';
 import { Query } from 'type-graphql';
 
