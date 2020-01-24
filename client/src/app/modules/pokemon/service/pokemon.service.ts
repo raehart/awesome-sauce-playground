@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Apollo, Query } from 'apollo-angular';
 import gql from 'graphql-tag';
+import { catchError, map } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,7 @@ export class PokemonService {
 
   constructor(private apollo: Apollo) { }
 
-  getPokedex() {
+  getPokedex(variables: {limit: number, offset: number} = {limit: 9, offset: 0}) {
     const query = gql`
       query(
         $offset: Float!,
@@ -62,12 +64,16 @@ export class PokemonService {
       }
     `;
 
-    const variables = {
-      limit: 9,
-      offset: 0
-    };
     return this.apollo.watchQuery<Query>({
       query, variables
-    }).valueChanges;
+    }).valueChanges.pipe(
+      map((result:any) => result.data.pokedexMock),
+      catchError(this.handleError)
+    );
+  }
+
+  handleError(error: any) {
+    console.error(error);
+    return of([]);
   }
 }
