@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PokemonModule } from './modules/pokemon/pokemon.module';
 
 import { AppComponent } from './app.component';
+import { LinkComponent } from './components/link/link.component';
 
 import {
   LandingComponent,
@@ -28,6 +29,7 @@ import {
     SquanchComponent,
     PokedexComponent,
     StarwarsComponent,
+    LinkComponent,
   ],
   imports: [
     SharedModule.forRoot(),
