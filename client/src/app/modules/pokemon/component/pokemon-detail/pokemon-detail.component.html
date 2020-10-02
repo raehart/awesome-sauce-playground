@@ -1,14 +1,25 @@
-<div class="pokemon-detail bg-red-300 text-red-800 p-4 m-2 max-w-xs rounded">
+<div class="pokemon-detail bg-teal-400 text-white p-4 m-2 max-w-md rounded">
   <h4 class="text-center font-display text-3xl">{{ pokemon.name }}</h4>
   <img class="rounded h-64 w-64 object-contain bg-white p-2"
        [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
 
   <section class="bio mt-4">
-    <p class="m-1">
-      <span class="font-cute leading-none text-2xl">Types </span>
-      <ng-container *ngFor="let t of pokemon.types">
-        {{ t.type.name }}
-      </ng-container>
-    </p>
+    <span class="font-cute leading-none text-3xl">Types </span>
+    <div class="m-1 flex items-stretch">
+      <div class="m-2 font-cute text-3xl text-white" *ngFor="let t of pokemon.types">
+        <span class="p-2 bg-type-{{ t.type.name }} rounded">{{ t.type.name }}</span>
+      </div>
+    </div>
+  </section>
+  <section class="stats mt-4">
+    <p class="font-cute leading-none text-2xl m-1">Stats</p>
+
+    <div *ngFor="let stat of pokemon.stats">
+      <span class="font-cute text-2xl">{{ stat.stat.name }}</span>: {{ stat.base_stat }}
+      <div class="bar block w-full h-4 bg-purple-200">
+        <div class="bar-fill bg-purple-600 h-4"
+             [ngStyle]="{'width': stat.base_stat / 2.5 + '%' }"></div>
+      </div>
+    </div>
   </section>
 </div>

@@ -19,7 +19,7 @@ export class PokedexComponent implements OnInit {
 
   getPokedex() {
     this.pokemonService.getPokedex(
-      { limit: 9, offset: 386 }
+      { limit: 80, offset: 200 }
     ).subscribe((pokedex: Pokemon[]) => {
       this.pokedex = pokedex;
       console.log(this.pokedex);
